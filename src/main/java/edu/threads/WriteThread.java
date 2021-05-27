@@ -16,13 +16,13 @@ public class WriteThread extends Thread{
 
         int length = mediaLibrary.getItemsCount();
 
-        for(int i=0;i<length;i++) {
+        for(int i=0; i<length; i++) {
             synchronized (mediaLibrary) {
                 mediaLibrary.notify();
                 mediaLibrary.setDuration(i, i * 100);
                 System.out.println("Write: " + mediaLibrary.getDuration(i) + "  at: " + i);
                 try {
-                    if(i+1==length) return;
+                    if(i + 1 == length) return;
                     mediaLibrary.wait();
 
                 } catch (InterruptedException e) {

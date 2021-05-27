@@ -16,7 +16,7 @@ public class ReadThread extends Thread{
 
         int length = mediaLibrary.getItemsCount();
 
-        for(int i=0;i<length;i++) {
+        for(int i=0; i<length; i++) {
 
             synchronized (mediaLibrary) {
                 mediaLibrary.notify();

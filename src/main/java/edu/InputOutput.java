@@ -132,4 +132,8 @@ public class InputOutput {
         return strs;
     }
 
+    public static Collectable getSynchronizedCollectable(Collectable c) {
+        return new SynchronizedCollectable(c);
+    }
+
 }
