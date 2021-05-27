@@ -49,7 +49,7 @@ public class SynchronizedCollectable implements Collectable {
 
     @Override
     public synchronized void setItem(int index, String title){
-        setItem(index, title);
+        c.setItem(index, title);
     }
 
     @Override
